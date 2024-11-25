@@ -16,12 +16,6 @@ public class PlayerController : MonoBehaviour
         characterAnimator = GetComponent<Animator>(); 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -42,7 +36,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (horizontalInput < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, -1); 
         }
 
         if (Input.GetButtonDown("Jump") && GroundSensor.isGrounded)
